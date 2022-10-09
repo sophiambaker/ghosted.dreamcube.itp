@@ -92,7 +92,7 @@ The following libraries and their dependencies are included in the `Plugins` fol
 1. Fork the repo
 2. Rename the repo (To your project name)
 3. Clone your fork `git clone [your forks name]`
-4. Load the core submodule `git submodule --init --recursive`
+4. Load the core submodule `git submodule update --init --recursive`
 5. Set the configuration file:
 
 An external settings file is required. It's located at `StreamingAssets\general_config.json`.
