@@ -548,7 +548,7 @@ MonoBehaviour:
   - GameRoom
   - Calibration
   ContentScenesNames:
-  - Ghosted_test
+  - Ghosted_test 1
 --- !u!4 &1627232687
 Transform:
   m_ObjectHideFlags: 0

@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/_DemoApp/Scenes/Main.unity
     guid: 8785903a35f727c43a00f0543a1ccba5
   - enabled: 1
-    path: Assets/_DemoApp/Scenes/Demo Scenes/Ghosted_test.unity
-    guid: 60a5e89e19b3c8c48a3773c8004028bb
+    path: Assets/_DemoApp/Scenes/Demo Scenes/Ghosted_test 1.unity
+    guid: 2763435215b7d634fa08240175c8db45
   - enabled: 1
     path: Assets/_DemoApp/Scenes/Base Scenes/GameRoom.unity
     guid: 701187a5a8babf944a71f8de216accbd

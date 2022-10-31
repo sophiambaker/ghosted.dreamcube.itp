@@ -1,0 +1,26 @@
+Universal Rendering Pipeline (URP). 
+
+--------
+
+Victorian Bedroom Furniture Props Pack includes: Bed, Double bed, Pouf, Bedside table, Wardrobe, Vanity table, Room divider, Floor mirror, Commode, Dining table and chair, Oil lamps, Candles, Vase with lilies, Picture frames, Perfume bottles and other Bedroom props.
+
+All doors and drawers are separate objects that can be moved.
+
+--------
+
+Number of Unique Meshes: 33
+Collision: Yes, automatically generated
+Vertex Count: from 2 to 19 328 tris
+LODs: No
+Number of Materials: 30
+Number of Textures: 109
+Texture Resolutions: 4096x4096px, 2048x2048px, 1024x1024px, 512x512px
+(AlbedoTransparency, AO, Normal, MetallicSmoothness, Emission)
+Textures format: TGA
+UVs: channel 0: overlapping; channel 1: non-overlapping (for baking lightmaps).
+
+--------
+
+
+If you have any questions, please write me on e-mail.
+My e-mail: gladkaya.3d@gmail.com
