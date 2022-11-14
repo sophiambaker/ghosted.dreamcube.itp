@@ -322,6 +322,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1021831286}
+    - target: {fileID: 4964211378759783850, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4964211379539029753, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -393,6 +397,10 @@ PrefabInstance:
     - target: {fileID: 4964211380407012589, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
       propertyPath: m_Name
       value: UIRoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964211380448740131, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4964211379539029759, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
