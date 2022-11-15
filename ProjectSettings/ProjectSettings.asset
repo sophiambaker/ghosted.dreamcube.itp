@@ -615,21 +615,22 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: dUI_TextMeshPro
+    Android: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
     CloudRendering: dUI_TextMeshPro
+    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2
     GameCoreScarlett: dUI_TextMeshPro
-    GameCoreXboxOne: dUI_TextMeshPro
-    Lumin: dUI_TextMeshPro
-    Nintendo Switch: dUI_TextMeshPro
-    PS4: dUI_TextMeshPro
-    PS5: dUI_TextMeshPro
-    Stadia: dUI_TextMeshPro
-    Standalone: dUI_TextMeshPro
-    WebGL: dUI_TextMeshPro
-    Windows Store Apps: dUI_TextMeshPro
-    XboxOne: dUI_TextMeshPro
+    GameCoreXboxOne: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Lumin: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Nintendo Switch: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    PS4: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    PS5: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Stadia: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Standalone: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    WebGL: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Windows Store Apps: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    XboxOne: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
     iPhone: dUI_TextMeshPro
-    tvOS: dUI_TextMeshPro
+    tvOS: dUI_TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
