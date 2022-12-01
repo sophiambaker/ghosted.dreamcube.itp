@@ -10,6 +10,7 @@ ServerData
 .token
 
 # Logs folder
+builds
 Logs
 
 # Unity

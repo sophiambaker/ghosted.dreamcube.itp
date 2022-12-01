@@ -11,6 +11,7 @@ public class FloorTarget : MonoBehaviour
 
     private int _timesHit;
 
+
     public FloorTarget(GameObject visualObject)
     {
         VisualObject = visualObject;
@@ -21,6 +22,8 @@ public class FloorTarget : MonoBehaviour
         // only be triggered by an object tagged as "Ball"
         if (other.gameObject.CompareTag("Ball"))
             Hit();
+
+
     }
 
     public void Hit()
