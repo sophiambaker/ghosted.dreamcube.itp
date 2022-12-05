@@ -6,6 +6,8 @@ public class DiaryInteraction : MonoBehaviour
 {
     [SerializeField]
     AudioSource audioSource;
+
+    bool hasBeenTriggered = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,11 @@ public class DiaryInteraction : MonoBehaviour
         // only be triggered by an object tagged as "Ball"
         if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty")) {
             Hit();
-            audioSource.Play();}
+            if (!audioSource.isPlaying && !hasBeenTriggered) {
+              audioSource.Play();
+            }
+            hasBeenTriggered = true;
+        }
     }
 
     public void Hit()

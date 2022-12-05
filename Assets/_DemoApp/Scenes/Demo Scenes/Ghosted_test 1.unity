@@ -4197,6 +4197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightRear: {fileID: 1498392113}
   lightFront: {fileID: 956730446}
+  triggerLights: []
 --- !u!1 &1041779041
 GameObject:
   m_ObjectHideFlags: 0
