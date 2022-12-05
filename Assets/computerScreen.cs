@@ -10,7 +10,7 @@ public class computerScreen : MonoBehaviour
   void start()
   {
     Debug.Log("starting");
-    //compScreen = gameObject.GetComponent(typeof(CompScreen)) as CompScreen;
+    
   }
 
   // Update is called once per frame
