@@ -12,6 +12,9 @@ TagManager:
   - Fergie Fragment
   - WallMarker
   - Ball Trail
+  - Ghosty
+  - CompScreen
+  - TriggerSpotLights
   layers:
   - Default
   - TransparentFX
