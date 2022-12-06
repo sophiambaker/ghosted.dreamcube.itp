@@ -1,17 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class computerScreen : MonoBehaviour
 {
-  [SerializeField]
-  GameObject compScreen;
-  // Start is called before the first frame update
-  void start()
+    [SerializeField]
+    GameObject compScreen;
+
+    [SerializeField]
+    VideoPlayer videoPlayer;
+
+    bool hasBeenTriggered;
+
+    // Start is called before the first frame update
+    void start()
   {
-    Debug.Log("starting");
-    
-  }
+        Debug.Log("starting");
+        //videoPlayer.SetActive(false);
+
+    }
 
   // Update is called once per frame
   void Update()
@@ -22,10 +30,17 @@ public class computerScreen : MonoBehaviour
   private void OnTriggerEnter(Collider other)
   {
 
-      // only be triggered by an object tagged as "Ball"
-      if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty"))
-          Hit();
-  }
+        // only be triggered by an object tagged as "Ball"
+        if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty"))
+        {
+            Hit();
+            if (!videoPlayer.isPlaying && !hasBeenTriggered)
+            {
+               videoPlayer.Play();
+            }
+            hasBeenTriggered = true;
+        }
+    }
 
   public void Hit()
   {
@@ -36,8 +51,8 @@ public class computerScreen : MonoBehaviour
   {
     Debug.Log("colliding");
       // change color
-      var col = Random.ColorHSV(0, 1, 0.5f, 1, 1, 1);
-      compScreen.GetComponent<MeshRenderer>().material.color = col;
+      //var col = Random.ColorHSV(0, 1, 0.5f, 1, 1, 1);
+      //compScreen.GetComponent<MeshRenderer>().material.color = col;
 
   }
 }
