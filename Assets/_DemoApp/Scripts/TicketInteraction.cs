@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class TicketInteraction : MonoBehaviour
 {
+
+  [SerializeField]
+  AudioSource audioSource;
+  [SerializeField]
+  AudioSource finalSong;
+
+      bool hasBeenTriggered = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +23,13 @@ public class TicketInteraction : MonoBehaviour
         // only be triggered by an object tagged as "Ball"
         if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty"))
             Hit();
+        if (!audioSource.isPlaying && !hasBeenTriggered) {
+            audioSource.Play();
+        }
+        if(!audioSource.isPlaying && hasBeenTriggered) {
+          finalSong.Play();
+        }
+        hasBeenTriggered = true;
     }
 
     public void Hit()

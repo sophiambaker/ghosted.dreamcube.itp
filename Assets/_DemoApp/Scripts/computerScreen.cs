@@ -11,7 +11,10 @@ public class computerScreen : MonoBehaviour
     [SerializeField]
     VideoPlayer videoPlayer;
 
-    bool hasBeenTriggered;
+    [SerializeField]
+    AudioSource audioSource;
+
+    bool hasBeenTriggered = false;
 
     // Start is called before the first frame update
     void start()

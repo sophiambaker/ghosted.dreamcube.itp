@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class moveGhostWithPlayer : MonoBehaviour
 {
-    [SerializeField]
     GameObject Ball;
 
     // UNUSED
