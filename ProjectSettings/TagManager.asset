@@ -15,6 +15,7 @@ TagManager:
   - Ghosty
   - CompScreen
   - TriggerSpotLights
+  - Collider
   layers:
   - Default
   - TransparentFX

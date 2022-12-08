@@ -1317,7 +1317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &276732129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,6 +2036,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 320968012211048746, guid: b1a75939de1d65d43bdb3f5fc31b4631, type: 3}
+      propertyPath: m_TagString
+      value: Collider
+      objectReference: {fileID: 0}
     - target: {fileID: 320968012211048759, guid: b1a75939de1d65d43bdb3f5fc31b4631, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -2578,7 +2582,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &587808527
 GameObject:
@@ -3275,7 +3279,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63396
+  m_Name: pb_Mesh31918
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3938,6 +3942,10 @@ PrefabInstance:
     - target: {fileID: 320968012211048746, guid: b1a75939de1d65d43bdb3f5fc31b4631, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 320968012211048746, guid: b1a75939de1d65d43bdb3f5fc31b4631, type: 3}
+      propertyPath: m_TagString
+      value: Collider
       objectReference: {fileID: 0}
     - target: {fileID: 320968012211048759, guid: b1a75939de1d65d43bdb3f5fc31b4631, type: 3}
       propertyPath: m_RootOrder
@@ -6267,7 +6275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1250440985
 GameObject:
@@ -6764,6 +6772,10 @@ PrefabInstance:
     - target: {fileID: 320968012211048746, guid: b1a75939de1d65d43bdb3f5fc31b4631, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 320968012211048746, guid: b1a75939de1d65d43bdb3f5fc31b4631, type: 3}
+      propertyPath: m_TagString
+      value: Collider
       objectReference: {fileID: 0}
     - target: {fileID: 320968012211048759, guid: b1a75939de1d65d43bdb3f5fc31b4631, type: 3}
       propertyPath: m_RootOrder
@@ -7460,7 +7472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f15cf0ba8de4c359f70ede787d6564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ball: {fileID: 0}
 --- !u!1 &1535797683
 GameObject:
   m_ObjectHideFlags: 0
@@ -7832,7 +7843,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1553367107
 PrefabInstance:
@@ -8203,7 +8214,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63212
+  m_Name: pb_Mesh31722
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

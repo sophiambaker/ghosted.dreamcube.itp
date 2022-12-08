@@ -9,28 +9,34 @@ public class bed : MonoBehaviour
   [SerializeField]
   Light lightFront;
   IEnumerator myCouroutine;
+
   public GameObject[] triggerLights;
+  public GameObject human_outline;
 
   bool interacting = false;
   bool hasBeenTriggered = false;
-  float wait_n_seconds = 10;
+  float wait_n_seconds = 11;
 
 
   // Start is called before the first frame update
   void Start()
   {
     Debug.Log("starting");
-    triggerLights = GameObject.FindGameObjectsWithTag("TriggerSpotLights");
+    triggerLights = GameObject.FindGameObjectsWithTag("Collider");
     //hide trigger lights until participant lays in bed
     for(int i=0; i<triggerLights.Length; i++) {
       triggerLights[i].SetActive(false);
     }
+
+    human_outline = GameObject.FindWithTag("human_outline");
   }
 
   // Update is called once per frame
   void Update()
   {
-
+    if(!hasBeenTriggered) {
+      pulseHuman();
+    }
     if(interacting) {
       FlashLights();
       myCouroutine= wait(wait_n_seconds);
@@ -67,9 +73,16 @@ public class bed : MonoBehaviour
         interacting = true;
         hasBeenTriggered = true;
   }
-  public void FlashLights() {
-      lightFront.intensity = Mathf.PingPong(Time.time, 1);
-      lightRear.intensity = Mathf.PingPong(Time.time, 1);
+  private void pulseHuman() {
+      float r = human_outline.GetComponent<SpriteRenderer>().material.color.r;
+      float g = human_outline.GetComponent<SpriteRenderer>().material.color.g;
+      float b = human_outline.GetComponent<SpriteRenderer>().material.color.b;
+      float a = Mathf.PingPong(Time.time, 1) + .2f;
+      human_outline.GetComponent<SpriteRenderer>().material.color = new Color(r, g, b, a);
+  }
+  private void FlashLights() {
+      lightFront.intensity = Mathf.PingPong(Time.time * 5, 2);
+      lightRear.intensity = Mathf.PingPong(Time.time * 5, 2);
   }
 
 }

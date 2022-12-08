@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class moveGhostWithPlayer : MonoBehaviour
 {
-    GameObject Ball;
+    GameObject ball;
 
     // UNUSED
     // float DreamCubeFrontZ = -3.6625f;
@@ -13,7 +13,6 @@ public class moveGhostWithPlayer : MonoBehaviour
 
     void Start()
     {
-      Ball = GameObject.FindWithTag("Ball");
     }
 
     // Update is called once per frame
@@ -25,9 +24,19 @@ public class moveGhostWithPlayer : MonoBehaviour
 
     void UpdatePosition() {
       //update the position
-        //float new_z = map(transform.position.z, DreamCubeFrontZ, DreamCubeRearZ, VirtualWorldRearZ, DreamCubeRearZ);
-        float new_z = -Ball.transform.position.z;
-        transform.position = new Vector3(Ball.transform.position.x, transform.position.y, new_z);
+      var ball = GetBall();
+      if(ball != null) {
+        float new_z = -ball.transform.position.z;
+        transform.position = new Vector3(ball.transform.position.x, transform.position.y, new_z);
+      }
+    }
+
+    private GameObject GetBall()
+    {
+      if(ball == null) {
+        ball = GameObject.FindWithTag("Ball");
+      }
+      return ball;
     }
 
 
