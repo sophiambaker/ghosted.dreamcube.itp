@@ -2298,7 +2298,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63432
+  m_Name: pb_Mesh31954
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3831,7 +3831,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.17
+  m_Intensity: 2
   m_Range: 6.54
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4214,8 +4214,8 @@ GameObject:
   - component: {fileID: 1002109109}
   - component: {fileID: 1002109108}
   m_Layer: 0
-  m_Name: PngItem_2119900
-  m_TagString: Untagged
+  m_Name: human_outline
+  m_TagString: human_outline
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4409,6 +4409,7 @@ MonoBehaviour:
   lightRear: {fileID: 1498392113}
   lightFront: {fileID: 956730446}
   triggerLights: []
+  human_outline: {fileID: 0}
 --- !u!1 &1041779041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,7 +5663,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63352
+  m_Name: pb_Mesh31868
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7243,7 +7244,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.17
+  m_Intensity: 2
   m_Range: 6.54
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -8016,7 +8017,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63498
+  m_Name: pb_Mesh32020
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -52,7 +52,7 @@ public class computerScreen : MonoBehaviour
 
   public void PositiveFeedback()
   {
-    Debug.Log("colliding");
+    Debug.Log("Collision with Computer Screen.");
       // change color
       //var col = Random.ColorHSV(0, 1, 0.5f, 1, 1, 1);
       //compScreen.GetComponent<MeshRenderer>().material.color = col;

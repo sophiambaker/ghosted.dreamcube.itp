@@ -16,6 +16,7 @@ TagManager:
   - CompScreen
   - TriggerSpotLights
   - Collider
+  - human_outline
   layers:
   - Default
   - TransparentFX

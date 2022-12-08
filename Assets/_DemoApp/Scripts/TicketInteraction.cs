@@ -21,15 +21,16 @@ public class TicketInteraction : MonoBehaviour
     {
 
         // only be triggered by an object tagged as "Ball"
-        if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty"))
+        if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty")) {
             Hit();
-        if (!audioSource.isPlaying && !hasBeenTriggered) {
-            audioSource.Play();
+            if (!audioSource.isPlaying && !hasBeenTriggered) {
+                audioSource.Play();
+            }
+            hasBeenTriggered = true;
         }
         if(!audioSource.isPlaying && hasBeenTriggered) {
           finalSong.Play();
         }
-        hasBeenTriggered = true;
     }
 
     public void Hit()
