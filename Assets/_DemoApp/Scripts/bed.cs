@@ -27,7 +27,6 @@ public class bed : MonoBehaviour
     for(int i=0; i<triggerLights.Length; i++) {
       triggerLights[i].SetActive(false);
     }
-
     human_outline = GameObject.FindWithTag("human_outline");
   }
 
@@ -42,9 +41,11 @@ public class bed : MonoBehaviour
       myCouroutine= wait(wait_n_seconds);
       StartCoroutine(myCouroutine);
     }
+    else if(hasBeenTriggered) {
+      human_outline.SetActive(false);
+    }
     else {
-      lightFront.intensity = 0;
-      lightRear.intensity = 0;
+      TurnOffLights();
     }
   }
 
@@ -83,6 +84,10 @@ public class bed : MonoBehaviour
   private void FlashLights() {
       lightFront.intensity = Mathf.PingPong(Time.time * 5, 2);
       lightRear.intensity = Mathf.PingPong(Time.time * 5, 2);
+  }
+  private void TurnOffLights() {
+      lightFront.intensity = 0;
+      lightRear.intensity = 0;
   }
 
 }

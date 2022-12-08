@@ -14,13 +14,13 @@ public class computerScreen : MonoBehaviour
     [SerializeField]
     AudioSource audioSource;
 
+    GameObject triggerLight;
+
     bool hasBeenTriggered = false;
 
     // Start is called before the first frame update
     void start()
-  {
-        Debug.Log("starting");
-        //videoPlayer.SetActive(false);
+    {
 
     }
 
@@ -36,26 +36,28 @@ public class computerScreen : MonoBehaviour
         // only be triggered by an object tagged as "Ball"
         if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty"))
         {
-            Hit();
-            if (!videoPlayer.isPlaying && !hasBeenTriggered)
+            if (!videoPlayer.isPlaying && !audioSource.isPlaying && !hasBeenTriggered)
             {
                videoPlayer.Play();
+               audioSource.Play();
             }
-            hasBeenTriggered = true;
+            Hit();
         }
     }
 
-  public void Hit()
+  private void Hit()
   {
-      PositiveFeedback();
+      Debug.Log("Collision with Computer Screen.");
+      hasBeenTriggered = true;
+      getGameObject(triggerLight, "DeskSpotLight").GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0, 0);
   }
 
-  public void PositiveFeedback()
+  private GameObject getGameObject(GameObject obj, string tag)
   {
-    Debug.Log("Collision with Computer Screen.");
-      // change color
-      //var col = Random.ColorHSV(0, 1, 0.5f, 1, 1, 1);
-      //compScreen.GetComponent<MeshRenderer>().material.color = col;
-
+    if(obj == null) {
+      obj = GameObject.FindWithTag(tag);
+    }
+    return obj;
   }
+
 }
