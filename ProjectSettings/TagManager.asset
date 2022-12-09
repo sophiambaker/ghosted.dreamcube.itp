@@ -17,6 +17,10 @@ TagManager:
   - TriggerSpotLights
   - Collider
   - human_outline
+  - DiarySpotLight
+  - CorkBoardSpotLight
+  - DeskSpotLight
+  - diaryVideo
   layers:
   - Default
   - TransparentFX
