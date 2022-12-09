@@ -25,7 +25,6 @@ public class computerScreen : MonoBehaviour
     // Start is called before the first frame update
     void start()
     {
-
     }
 
   // Update is called once per frame
@@ -42,19 +41,20 @@ public class computerScreen : MonoBehaviour
         // only be triggered by an object tagged as "Ball"
         if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty"))
         {
-            if (!videoPlayer.isPlaying && !audioSource.isPlaying && !triggered)
+            Hit();
+            if (!videoPlayer.isPlaying && !audioSource.isPlaying && triggered && interacting )
             {
                videoPlayer.Play();
                audioSource.Play();
             }
-            Hit();
         }
     }
 
   private void Hit()
   {
       // We can only trigger a collider once.
-      if(!triggered) {
+      if(!triggered && !FindObjectOfType<TicketInteraction>().isInteracting()
+        && !FindObjectOfType<DiaryInteraction>().isInteracting()) {
         Debug.Log("Collision with Computer Screen.");
         triggered = true;
         interacting = true;

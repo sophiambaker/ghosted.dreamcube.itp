@@ -46,10 +46,10 @@ public class TicketInteraction : MonoBehaviour
     {
         // only be triggered by an object tagged as "Ball"
         if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty")) {
-            if (!audioSource.isPlaying && !triggered) {
+            Hit();
+            if (!audioSource.isPlaying && triggered && interacting) {
                 audioSource.Play();
             }
-            Hit();
         }
 
 
@@ -57,7 +57,7 @@ public class TicketInteraction : MonoBehaviour
 
     private void Hit()
     {
-      // We can only trigger a collider once, and if the other interactions are not active 
+      // We can only trigger a collider once, and if the other interactions are not active
       if(!triggered && !diaryScript.isInteracting() && !compScript.isInteracting()) {
         Debug.Log("collision with Cork Board Collider.");
         interacting = true;

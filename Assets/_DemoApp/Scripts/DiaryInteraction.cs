@@ -17,6 +17,8 @@ public class DiaryInteraction : MonoBehaviour
     void Start()
     {
       triggerLight = GameObject.FindWithTag("DiarySpotLight");
+      ticketScript = FindObjectOfType<TicketInteraction>();
+      compScript = FindObjectOfType<computerScreen>();
     }
     // Update is called once per frame
     void Update()
@@ -32,17 +34,17 @@ public class DiaryInteraction : MonoBehaviour
 
         // only be triggered by an object tagged as "Ball"
         if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty")) {
-            if (!audioSource.isPlaying && !triggered) {
+            Hit();
+            if (!audioSource.isPlaying && triggered && interacting) {
               audioSource.Play();
             }
-            Hit();
         }
     }
 
     private void Hit()
     {
       // We can only trigger a collider once
-      if(!triggered) {
+      if(!triggered && !ticketScript.isInteracting() && !compScript.isInteracting()) {
         triggered = true;
         interacting = true;
         triggerLight.GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0, 0);
