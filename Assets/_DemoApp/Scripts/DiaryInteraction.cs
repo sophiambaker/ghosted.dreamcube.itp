@@ -7,7 +7,10 @@ public class DiaryInteraction : MonoBehaviour
     [SerializeField]
     AudioSource audioSource;
 
-    bool hasBeenTriggered = false;
+    TicketInteraction ticketScript;
+    computerScreen compScript;
+
+    bool triggered= false;
     bool interacting = false;
     GameObject triggerLight;
     // Start is called before the first frame update
@@ -15,32 +18,48 @@ public class DiaryInteraction : MonoBehaviour
     {
       triggerLight = GameObject.FindWithTag("DiarySpotLight");
     }
+    // Update is called once per frame
+    void Update()
+    {
+      if(!audioSource.isPlaying && triggered && interacting) {
+          Debug.Log("dairy no longer interacting.");
+          interacting = false;
+      }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
 
         // only be triggered by an object tagged as "Ball"
         if (other.gameObject.CompareTag("Ball") || other.gameObject.CompareTag("Ghosty")) {
-            if (!audioSource.isPlaying && !hasBeenTriggered) {
+            if (!audioSource.isPlaying && !triggered) {
               audioSource.Play();
             }
             Hit();
         }
     }
 
-    public void Hit()
+    private void Hit()
     {
-      hasBeenTriggered = true;
-      interacting = true;
-      triggerLight.GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0, 0);
-      Debug.Log("collision with Diary Collider.");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      if(!audioSource.isPlaying && hasBeenTriggered && interacting) {
-          interacting = false;
+      // We can only trigger a collider once
+      if(!triggered) {
+        triggered = true;
+        interacting = true;
+        triggerLight.GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0, 0);
+        Debug.Log("collision with Diary Collider.");
       }
     }
+
+    // -----------------------------------------------------------------------//
+    //
+    //                                public
+    //
+    //-------------------------------------------------------------------------
+    public bool isInteracting() {
+      return interacting;
+    }
+    public bool hasBeenTriggered() {
+      return triggered;
+    }
+
 }

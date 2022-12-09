@@ -47,6 +47,7 @@ public class bed : MonoBehaviour
     else {
       TurnOffLights();
     }
+    
   }
 
   IEnumerator wait(float seconds){

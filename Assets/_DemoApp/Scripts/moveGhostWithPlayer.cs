@@ -19,7 +19,6 @@ public class moveGhostWithPlayer : MonoBehaviour
     void Update()
     {
       UpdatePosition();
-
     }
 
     void UpdatePosition() {
