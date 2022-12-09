@@ -13,12 +13,15 @@ public class DiaryInteraction : MonoBehaviour
     bool triggered= false;
     bool interacting = false;
     GameObject triggerLight;
+    GameObject diaryVideo;
     // Start is called before the first frame update
     void Start()
     {
       triggerLight = GameObject.FindWithTag("DiarySpotLight");
       ticketScript = FindObjectOfType<TicketInteraction>();
       compScript = FindObjectOfType<computerScreen>();
+      diaryVideo = GameObject.FindWithTag("diaryVideo");
+
     }
     // Update is called once per frame
     void Update()
@@ -26,6 +29,9 @@ public class DiaryInteraction : MonoBehaviour
       if(!audioSource.isPlaying && triggered && interacting) {
           Debug.Log("dairy no longer interacting.");
           interacting = false;
+      }
+      if(!triggered && diaryVideo != null) {
+        diaryVideo.SetActive(false);
       }
     }
 
@@ -37,6 +43,7 @@ public class DiaryInteraction : MonoBehaviour
             Hit();
             if (!audioSource.isPlaying && triggered && interacting) {
               audioSource.Play();
+              diaryVideo.SetActive(true);
             }
         }
     }
